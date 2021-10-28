@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" href="style.css"/>
+    <title>Title</title>
+
+</head>
+    <script>
+ window.onload = function () {
+
+                    var duration = prompt("Digite o numero para iniciar contagem regressiva");
+                    var display = document.querySelector("#cont");
+                    startTimer(duration, display);
+        }
+function startTimer(duration, display) {
+            var timer = duration, segundos;
+            setInterval(function () {
+                if (--timer < 0) {
+                    timer = duration;
+                }
+var cont = duration +":" +duration ;
+result = duration - 1 >= 0 ? duration-- : "FIM";
+cont.innerText = result;
+   document.getElementById("cont").style.fontSize = "150px";
+ document.getElementById("cont").style.color = "#FF4500";
+ document.getElementById("cont").innerHTML = result;
+
+
+
+                var countDownDate = new Date("").getTime();
+
+
+
+            }, 1000);
+        }
+
+
+
+    </script>
+
+<body>
+<div id="cont">
+</div>
+
+</body>
+</html>
